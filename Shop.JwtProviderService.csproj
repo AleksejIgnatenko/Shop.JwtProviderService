@@ -9,8 +9,11 @@
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
+	<ItemGroup>
+		<Protobuf Include="Protos\JwtToken.proto" GrpcServices="Server" />
+	</ItemGroup>
+
   <ItemGroup>
-	 <Protobuf Include="Protos\JwtToken.proto" GrpcServices="Server" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.2" />
